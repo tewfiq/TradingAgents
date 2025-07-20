@@ -1,0 +1,374 @@
+/* TradingAgents Terminal-Inspired Dark Theme */
+
+/* Import monospace fonts */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Terminal Color Palette */
+  --terminal-bg: #0a0a0a;
+  --terminal-paper: #1a1a1a;
+  --terminal-border: #333333;
+  --terminal-green: #00ff88;
+  --terminal-red: #ff6b6b;
+  --terminal-blue: #4dabf7;
+  --terminal-yellow: #ffd43b;
+  --terminal-purple: #da77f2;
+  --terminal-cyan: #22d3ee;
+  --terminal-text: #ffffff;
+  --terminal-text-dim: #b0b0b0;
+  --terminal-text-muted: #666666;
+  
+  /* Shadows and effects */
+  --terminal-glow: 0 0 10px rgba(0, 255, 136, 0.3);
+  --terminal-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Global theme overrides */
+html, body {
+  background-color: var(--terminal-bg) !important;
+  color: var(--terminal-text) !important;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Monaco', 'Consolas', monospace !important;
+}
+
+/* Main app container */
+.chainlit-app {
+  background: var(--terminal-bg) !important;
+  color: var(--terminal-text) !important;
+}
+
+/* Header styling */
+.MuiAppBar-root {
+  background: linear-gradient(135deg, var(--terminal-paper) 0%, #252525 100%) !important;
+  border-bottom: 2px solid var(--terminal-green) !important;
+  box-shadow: var(--terminal-shadow) !important;
+}
+
+.MuiToolbar-root h1 {
+  color: var(--terminal-green) !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-weight: 700 !important;
+  text-shadow: var(--terminal-glow) !important;
+}
+
+/* Chat messages container */
+.MuiContainer-root {
+  background-color: var(--terminal-bg) !important;
+}
+
+/* Message bubbles */
+.MuiPaper-root {
+  background-color: var(--terminal-paper) !important;
+  border: 1px solid var(--terminal-border) !important;
+  border-radius: 8px !important;
+  box-shadow: var(--terminal-shadow) !important;
+}
+
+/* User messages */
+.message.user .MuiPaper-root {
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 100%) !important;
+  border-left: 4px solid var(--terminal-blue) !important;
+}
+
+/* Assistant messages */
+.message.assistant .MuiPaper-root {
+  background: linear-gradient(135deg, var(--terminal-paper) 0%, #0f1419 100%) !important;
+  border-left: 4px solid var(--terminal-green) !important;
+}
+
+/* System messages */
+.message.system .MuiPaper-root {
+  background: linear-gradient(135deg, #2a1810 0%, #1a1008 100%) !important;
+  border-left: 4px solid var(--terminal-yellow) !important;
+}
+
+/* Message text */
+.message .MuiTypography-root {
+  color: var(--terminal-text) !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  line-height: 1.6 !important;
+}
+
+/* Code blocks */
+pre {
+  background-color: #000000 !important;
+  border: 1px solid var(--terminal-border) !important;
+  border-radius: 6px !important;
+  padding: 16px !important;
+  font-family: 'Fira Code', monospace !important;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+code {
+  background-color: rgba(0, 255, 136, 0.1) !important;
+  color: var(--terminal-green) !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+  font-family: 'Fira Code', monospace !important;
+  border: 1px solid rgba(0, 255, 136, 0.2) !important;
+}
+
+/* Markdown headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--terminal-green) !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  text-shadow: var(--terminal-glow) !important;
+  border-bottom: 1px solid var(--terminal-border) !important;
+  padding-bottom: 8px !important;
+  margin-bottom: 16px !important;
+}
+
+h1 { color: var(--terminal-green) !important; }
+h2 { color: var(--terminal-blue) !important; }
+h3 { color: var(--terminal-purple) !important; }
+h4 { color: var(--terminal-cyan) !important; }
+
+/* Lists */
+ul, ol {
+  color: var(--terminal-text) !important;
+}
+
+li {
+  margin: 8px 0 !important;
+  color: var(--terminal-text) !important;
+}
+
+/* Links */
+a {
+  color: var(--terminal-cyan) !important;
+  text-decoration: none !important;
+  border-bottom: 1px solid rgba(34, 211, 238, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+a:hover {
+  color: var(--terminal-blue) !important;
+  border-bottom-color: var(--terminal-blue) !important;
+  text-shadow: 0 0 5px rgba(77, 171, 247, 0.5) !important;
+}
+
+/* Action buttons */
+.MuiButton-root {
+  background: linear-gradient(135deg, var(--terminal-green) 0%, #00cc6a 100%) !important;
+  color: var(--terminal-bg) !important;
+  border: none !important;
+  border-radius: 6px !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  box-shadow: var(--terminal-shadow) !important;
+  transition: all 0.3s ease !important;
+}
+
+.MuiButton-root:hover {
+  background: linear-gradient(135deg, #00cc6a 0%, var(--terminal-green) 100%) !important;
+  box-shadow: var(--terminal-glow), var(--terminal-shadow) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Secondary buttons */
+.MuiButton-outlined {
+  background: transparent !important;
+  color: var(--terminal-green) !important;
+  border: 2px solid var(--terminal-green) !important;
+}
+
+.MuiButton-outlined:hover {
+  background: rgba(0, 255, 136, 0.1) !important;
+  border-color: var(--terminal-green) !important;
+}
+
+/* Input fields */
+.MuiInputBase-root {
+  background-color: var(--terminal-paper) !important;
+  color: var(--terminal-text) !important;
+  border: 1px solid var(--terminal-border) !important;
+  border-radius: 6px !important;
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+.MuiInputBase-root:focus-within {
+  border-color: var(--terminal-green) !important;
+  box-shadow: 0 0 0 2px rgba(0, 255, 136, 0.2) !important;
+}
+
+.MuiInputBase-input {
+  color: var(--terminal-text) !important;
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+.MuiInputBase-input::placeholder {
+  color: var(--terminal-text-muted) !important;
+  opacity: 0.7 !important;
+}
+
+/* Input field labels */
+.MuiFormLabel-root {
+  color: var(--terminal-text-dim) !important;
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+.MuiFormLabel-root.Mui-focused {
+  color: var(--terminal-green) !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--terminal-bg);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--terminal-border) 0%, #555555 100%);
+  border-radius: 6px;
+  border: 2px solid var(--terminal-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #555555 0%, var(--terminal-green) 100%);
+}
+
+/* Loading spinner */
+.MuiCircularProgress-root {
+  color: var(--terminal-green) !important;
+}
+
+/* Chips/Tags */
+.MuiChip-root {
+  background-color: rgba(0, 255, 136, 0.1) !important;
+  color: var(--terminal-green) !important;
+  border: 1px solid rgba(0, 255, 136, 0.3) !important;
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* Tables */
+.MuiTable-root {
+  background-color: var(--terminal-paper) !important;
+  border: 1px solid var(--terminal-border) !important;
+  border-radius: 8px !important;
+}
+
+.MuiTableHead-root {
+  background-color: rgba(0, 255, 136, 0.1) !important;
+}
+
+.MuiTableCell-root {
+  color: var(--terminal-text) !important;
+  border-color: var(--terminal-border) !important;
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+.MuiTableCell-head {
+  color: var(--terminal-green) !important;
+  font-weight: 600 !important;
+}
+
+/* Status indicators */
+.status-pending {
+  color: var(--terminal-yellow) !important;
+}
+
+.status-in-progress {
+  color: var(--terminal-blue) !important;
+  animation: pulse 2s infinite;
+}
+
+.status-completed {
+  color: var(--terminal-green) !important;
+}
+
+.status-error {
+  color: var(--terminal-red) !important;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px rgba(0, 255, 136, 0.5); }
+  50% { text-shadow: 0 0 20px rgba(0, 255, 136, 0.8); }
+  100% { text-shadow: 0 0 5px rgba(0, 255, 136, 0.5); }
+}
+
+/* Terminal-style borders and effects */
+.terminal-box {
+  border: 2px solid var(--terminal-green);
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--terminal-paper) 0%, #0f1419 100%);
+  padding: 16px;
+  margin: 16px 0;
+  box-shadow: var(--terminal-shadow);
+  position: relative;
+}
+
+.terminal-box::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, var(--terminal-green), var(--terminal-blue), var(--terminal-purple), var(--terminal-cyan));
+  border-radius: 8px;
+  z-index: -1;
+  animation: borderGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes borderGlow {
+  0% { opacity: 0.5; }
+  100% { opacity: 0.8; }
+}
+
+/* ASCII art and monospace content */
+.ascii-art {
+  font-family: 'Fira Code', monospace !important;
+  color: var(--terminal-green) !important;
+  text-shadow: var(--terminal-glow) !important;
+  white-space: pre !important;
+  line-height: 1.2 !important;
+}
+
+/* Charts and visualizations */
+.plotly-container {
+  background-color: var(--terminal-paper) !important;
+  border: 1px solid var(--terminal-border) !important;
+  border-radius: 8px !important;
+  box-shadow: var(--terminal-shadow) !important;
+}
+
+/* Custom terminal prompt styling */
+.terminal-prompt {
+  color: var(--terminal-green) !important;
+  font-family: 'Fira Code', monospace !important;
+  font-weight: 600 !important;
+}
+
+.terminal-prompt::before {
+  content: '$ ';
+  color: var(--terminal-cyan) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .MuiContainer-root {
+    padding: 8px !important;
+  }
+  
+  .MuiPaper-root {
+    margin: 8px 0 !important;
+    padding: 12px !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.2em !important;
+  }
+}
