@@ -1,0 +1,42 @@
+# TradingAgents Web GUI Requirements
+# Base requirements for the web interface
+
+# Backend Service
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+websockets>=11.0.0
+pydantic>=2.0.0
+
+# Frontend Interface  
+chainlit>=1.0.0
+aiohttp>=3.9.0
+
+# Data Visualization
+plotly>=5.17.0
+
+# Existing TradingAgents dependencies
+typing-extensions
+langchain-openai
+langchain-experimental
+pandas
+yfinance
+praw
+feedparser
+stockstats
+eodhd
+langgraph
+chromadb
+setuptools
+backtrader
+akshare
+tushare
+finnhub-python
+parsel
+requests
+tqdm
+pytz
+redis
+rich
+questionary
+langchain_anthropic
+langchain-google-genai
